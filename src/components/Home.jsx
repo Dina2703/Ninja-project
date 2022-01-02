@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 function Home() {
   const [blogs, setBlogs] = useState([
@@ -13,13 +14,7 @@ function Home() {
   ]);
   return (
     <div className="home">
-      {/*the key attr React needs to keep track of every item in an array in the DOM */}
-      {blogs.map((blog) => (
-        <div key={blog.id} className="blog-preview">
-          <h2> {blog.title}</h2>
-          <p>Written by {blog.author}</p>
-        </div>
-      ))}
+      <BlogList blogs={blogs} title={"All Blogs"} />
     </div>
   );
 }
