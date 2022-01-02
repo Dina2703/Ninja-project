@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/*base styles*/
+/* base styles */
 * {
   margin: 0;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   color: #333;
 }
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;
-  min-width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -28,9 +28,8 @@
 .navbar a:hover {
   color: #f1356d;
 }
-
 .content {
-  min-width: 600px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 20px;
 }
