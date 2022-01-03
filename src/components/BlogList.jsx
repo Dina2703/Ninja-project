@@ -2,7 +2,7 @@ function BlogList(props) {
   const blogs = props.blogs;
   const title = props.title;
   const handleDelete = props.handleDelete;
-  console.log("props ", props, "blogs ", blogs);
+  // console.log("props ", props, "blogs ", blogs);
 
   return (
     <div className="blog-list">
