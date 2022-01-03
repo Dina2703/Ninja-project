@@ -1,7 +1,6 @@
 function BlogList(props) {
   const blogs = props.blogs;
   const title = props.title;
-  const handleDelete = props.handleDelete;
   // console.log("props ", props, "blogs ", blogs);
 
   return (
@@ -13,7 +12,6 @@ function BlogList(props) {
           <h2> {blog.title}</h2>
           <p>Written by {blog.author}</p>
           {/*we need to wrap the handleDelete inside the anonymous function so we can pass an argument into our custom function. We need to pass the id of the blog we want to delete, so we can find it in the array and delete it*/}
-          <button onClick={() => handleDelete(blog.id)}>Delete blog</button>
         </div>
       ))}
     </div>
