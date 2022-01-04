@@ -35,7 +35,7 @@
 }
 
 .blog-preview {
-  padding: 10px  16px;
+  padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #f0d7d7;
 }
@@ -46,4 +46,8 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
+}
+
+.blog-preview a {
+  text-decoration: none;
 }
