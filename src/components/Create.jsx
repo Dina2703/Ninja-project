@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function Create() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("mario");
   const [isPending, setIsPending] = useState(false);
+  //To invoke this hook we can put it in history const,now  we have a object which represents history, and on that object are several methods we can use to either go back through history, go forward through history(like clicking the back and forward arrows)
+  const history = useHistory();
 
   const handelSubmit = (e) => {
     //to prevent the page refreshing and auto clean the form.
@@ -26,6 +29,10 @@ function Create() {
       }).then(() => {
         console.log("new blog added");
         setIsPending(false);
+        //below code to go one step back
+        // history.go(-1);
+        //below to redirect the user to Home page, after the blog is added
+        history.push("/");
       });
     }, 1000);
   };
