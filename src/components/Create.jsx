@@ -5,10 +5,22 @@ function Create() {
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("mario");
 
+  const handelSubmit = (e) => {
+    //to prevent the page refreshing and auto clean the form.
+    e.preventDefault();
+    //creating a blog object with title. body and author proporties, but id(json-server does it automatically), that will be saved in db.json file
+    const blog = { title, body, author };
+    console.log(blog);
+  };
+
   return (
     <div className="create">
       <h2>Add a new Blog</h2>
-      <form>
+      <form
+        onSubmit={(e) => {
+          handelSubmit(e);
+        }}
+      >
         <label>Blog title:</label>
         <input
           value={title}
