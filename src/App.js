@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Create from "./components/Create";
 import BlogDetails from "./components/BlogDetails";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
             </Route>
             <Route path={"/blogs/:id"}>
               <BlogDetails />
+            </Route>
+            {/* * - it means catch any other routes *, it always goes as the last option inside switch*/}
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>
